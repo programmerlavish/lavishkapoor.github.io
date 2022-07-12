@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | LavishKapoor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Lavish Kapoor</h1>
+    <div class="container-fluid">
+      <div class="row"><ul>
+        <div class="col-sm-2"><li><a href="index.html" style="text-decoration: none;color: white;">Home</a></li></div>
+        <div class="col-sm-2"><li><a href="about.html" style="text-decoration: none;color: white;">About</a></li></div>
+        <div class="col-sm-3"><li><a href="qualification.html" style="text-decoration: none;color: white;">Qualification</a></li></div>
+        <div class="col-sm-2"><li><a href="project.html" style="text-decoration: none;color: white;background-color: rgb(19, 198, 198);">Projects</a></li></div>
+        <div class="col-sm-2"><li><a href="contact.html" style="text-decoration: none;color: white;">Contact</a></li></div>
+      </div>
+    </div>
+      <!--project.1-->
+      <h2>Calculator</h2>
+      <button onclick="ourFunction()">Calculator</button>
+      <p id="Demo"></p>
+      <script>
+          function ourFunction() {
+            const operator = prompt('Enter the operator "+,-,* or /"');
+            const number1 = parseFloat(prompt("Enter the first number"));
+            const number2 = parseFloat(prompt("Enter the second number"));
+            let result;
+            if (operator == "+") {
+              document.getElementById("Demo").innerHTML = result =
+                number1 + number2;
+            } else if (operator == "-") {
+              document.getElementById("Demo").innerHTML = result =
+                number1 - number2;
+            } else if (operator == "/") {
+              document.getElementById("Demo").innerHTML = result =
+                number1 / number2;
+            } else {
+              document.getElementById("Demo").innerHTML = result =
+                number1 * number2;
+            }
+          }
+        </script>
+      <hr>
+      <!--project.2-->
+      <h2>Lottery</h2>
+      <p id="jutsu">
+        <script>
+          let lucky_number = Math.floor(Math.random() * 10);
+          document.getElementById("jutsu").innerHTML =
+            "Todays luck number is " + lucky_number;
+        </script>
+      </p>
+      <button onclick="myFunction()">
+        There is a lottery for you, click on me
+      </button>
+      <p id="demo"></p>
+      <script>
+        function myFunction() {
+          let lottry = Math.floor(Math.random() * 10);
+          if (lottry == lucky_number) {
+            document.getElementById("demo").innerHTML = "You win";
+          } else {
+            document.getElementById("demo").innerHTML = "You lost";
+          }
+        }
+      </script>
+      <!--project.3-->
+      <hr>
+      <h2>Vaccination</h2>
+      <button onclick="yourFunction()">Check your Vaccination</button>
+      <p id="Demo"></p>
+      <script>
+        function yourFunction() {
+          const age = prompt("Enter your age");
+          if (age > 55) {
+            document.getElementById("Demo").innerHTML =
+              "Sorry sir/mam,there is no vaccine for you";
+          } else if (age == null) {
+            document.getElementById("Demo").innerHTML = "Please enter your age";
+          } else if (age >= 35) {
+            document.getElementById("Demo").innerHTML =
+              "You will get Covishield";
+          } else if (age >= 18) {
+            document.getElementById("Demo").innerHTML = "You will get Covaxin";
+          } else if (age >= 12) {
+            document.getElementById("Demo").innerHTML = "You will get Corbevax";
+          } else {
+            document.getElementById("Demo").innerHTML = "you are not eligible";
+          }
+        }
+      </script>
+  </body>
+</html>
