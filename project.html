@@ -21,10 +21,11 @@
         <div class="col-sm-2"><li><a href="contact.html" style="text-decoration: none;color: white;">Contact</a></li></div>
       </div>
     </div>
-      <!--project.1-->
-      <h2>Calculator</h2>
-      <button onclick="ourFunction()">Calculator</button>
-      <p id="Demo"></p>
+    <div class="container">
+    <!--project.1-->
+    <h2>Calculator</h2>
+    <button onclick="ourFunction()">Calculator</button>
+    <p id="Demo"></p>
       <script>
           function ourFunction() {
             const operator = prompt('Enter the operator "+,-,* or /"');
@@ -45,8 +46,10 @@
                 number1 * number2;
             }
           }
-        </script>
-      <hr>
+      </script>
+    </div>
+    <hr>
+    <div class="container">
       <!--project.2-->
       <h2>Lottery</h2>
       <p id="jutsu">
@@ -59,10 +62,12 @@
       <button onclick="myFunction()">
         There is a lottery for you, click on me
       </button>
+      <p id="demo1"></p>
       <p id="demo"></p>
       <script>
         function myFunction() {
           let lottry = Math.floor(Math.random() * 10);
+          document.getElementById("demo1").innerHTML = lottry
           if (lottry == lucky_number) {
             document.getElementById("demo").innerHTML = "You win";
           } else {
@@ -70,30 +75,33 @@
           }
         }
       </script>
+    </div>
+    <hr>
+    <div class="container">
       <!--project.3-->
-      <hr>
       <h2>Vaccination</h2>
       <button onclick="yourFunction()">Check your Vaccination</button>
-      <p id="Demo"></p>
+      <p id="Lavish"></p>
       <script>
         function yourFunction() {
           const age = prompt("Enter your age");
           if (age > 55) {
-            document.getElementById("Demo").innerHTML =
+            document.getElementById("Lavish").innerHTML =
               "Sorry sir/mam,there is no vaccine for you";
           } else if (age == null) {
-            document.getElementById("Demo").innerHTML = "Please enter your age";
+            document.getElementById("Lavish").innerHTML = "Please enter your age";
           } else if (age >= 35) {
-            document.getElementById("Demo").innerHTML =
+            document.getElementById("Lavish").innerHTML =
               "You will get Covishield";
           } else if (age >= 18) {
-            document.getElementById("Demo").innerHTML = "You will get Covaxin";
+            document.getElementById("Lavish").innerHTML = "You will get Covaxin";
           } else if (age >= 12) {
-            document.getElementById("Demo").innerHTML = "You will get Corbevax";
+            document.getElementById("Lavish").innerHTML = "You will get Corbevax";
           } else {
-            document.getElementById("Demo").innerHTML = "you are not eligible";
+            document.getElementById("Lavish").innerHTML = "you are not eligible";
           }
         }
       </script>
+    </div>
   </body>
 </html>
