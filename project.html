@@ -22,86 +22,90 @@
       </div>
     </div>
     <div class="container">
+      <hr>
     <!--project.1-->
-    <h2>Calculator</h2>
-    <button onclick="ourFunction()">Calculator</button>
-    <p id="Demo"></p>
-      <script>
-          function ourFunction() {
-            const operator = prompt('Enter the operator "+,-,* or /"');
-            const number1 = parseFloat(prompt("Enter the first number"));
-            const number2 = parseFloat(prompt("Enter the second number"));
-            let result;
-            if (operator == "+") {
-              document.getElementById("Demo").innerHTML = result =
-                number1 + number2;
-            } else if (operator == "-") {
-              document.getElementById("Demo").innerHTML = result =
-                number1 - number2;
-            } else if (operator == "/") {
-              document.getElementById("Demo").innerHTML = result =
-                number1 / number2;
+    <center>
+      <button onclick="ourFunction()" style="background-color: rgb(66, 226, 226);">Calculator</button>
+      <p id="Demo"></p>
+        <script>
+            function ourFunction() {
+              const operator = prompt('Enter the operator "+,-,* or /"');
+              const number1 = parseFloat(prompt("Enter the first number"));
+              const number2 = parseFloat(prompt("Enter the second number"));
+              let result;
+              if (operator == "+") {
+                document.getElementById("Demo").innerHTML = result =
+                  number1 + number2;
+              } else if (operator == "-") {
+                document.getElementById("Demo").innerHTML = result =
+                  number1 - number2;
+              } else if (operator == "/") {
+                document.getElementById("Demo").innerHTML = result =
+                  number1 / number2;
+              } else {
+                document.getElementById("Demo").innerHTML = result =
+                  number1 * number2;
+              }
+            }
+        </script>
+      </div>
+    </center>
+    <hr>
+    <!--project.2-->
+    <center>
+      <div class="container">
+        <p id="jutsu">
+          <script>
+            let lucky_number = Math.floor(Math.random() * 10);
+            document.getElementById("jutsu").innerHTML =
+              "Todays luck number is " + lucky_number;
+          </script>
+        </p>
+        <button onclick="myFunction()" style="background-color: rgb(66, 226, 226);">
+          There is a lottery for you, click on me
+        </button>
+        <p id="demo1"></p>
+        <p id="demo"></p>
+        <script>
+          function myFunction() {
+            let lottry = Math.floor(Math.random() * 10);
+            document.getElementById("demo1").innerHTML = lottry
+            if (lottry == lucky_number) {
+              document.getElementById("demo").innerHTML = "You win";
             } else {
-              document.getElementById("Demo").innerHTML = result =
-                number1 * number2;
+              document.getElementById("demo").innerHTML = "You lost";
             }
           }
-      </script>
-    </div>
-    <hr>
-    <div class="container">
-      <!--project.2-->
-      <h2>Lottery</h2>
-      <p id="jutsu">
-        <script>
-          let lucky_number = Math.floor(Math.random() * 10);
-          document.getElementById("jutsu").innerHTML =
-            "Todays luck number is " + lucky_number;
         </script>
-      </p>
-      <button onclick="myFunction()">
-        There is a lottery for you, click on me
-      </button>
-      <p id="demo1"></p>
-      <p id="demo"></p>
-      <script>
-        function myFunction() {
-          let lottry = Math.floor(Math.random() * 10);
-          document.getElementById("demo1").innerHTML = lottry
-          if (lottry == lucky_number) {
-            document.getElementById("demo").innerHTML = "You win";
-          } else {
-            document.getElementById("demo").innerHTML = "You lost";
-          }
-        }
-      </script>
-    </div>
+      </div>
+    </center>
     <hr>
-    <div class="container">
-      <!--project.3-->
-      <h2>Vaccination</h2>
-      <button onclick="yourFunction()">Check your Vaccination</button>
-      <p id="Lavish"></p>
-      <script>
-        function yourFunction() {
-          const age = prompt("Enter your age");
-          if (age > 55) {
-            document.getElementById("Lavish").innerHTML =
-              "Sorry sir/mam,there is no vaccine for you";
-          } else if (age == null) {
-            document.getElementById("Lavish").innerHTML = "Please enter your age";
-          } else if (age >= 35) {
-            document.getElementById("Lavish").innerHTML =
-              "You will get Covishield";
-          } else if (age >= 18) {
-            document.getElementById("Lavish").innerHTML = "You will get Covaxin";
-          } else if (age >= 12) {
-            document.getElementById("Lavish").innerHTML = "You will get Corbevax";
-          } else {
-            document.getElementById("Lavish").innerHTML = "you are not eligible";
+    <!--project.3-->
+    <center>
+      <div class="container">
+        <button onclick="yourFunction()" style="background-color: rgb(66, 226, 226);">Check your Vaccination</button>
+        <p id="Lavish"></p>
+        <script>
+          function yourFunction() {
+            const age = prompt("Enter your age");
+            if (age > 55) {
+              document.getElementById("Lavish").innerHTML =
+                "Sorry sir/mam,there is no vaccine for you";
+            } else if (age == null) {
+              document.getElementById("Lavish").innerHTML = "Please enter your age";
+            } else if (age >= 35) {
+              document.getElementById("Lavish").innerHTML =
+                "You will get Covishield";
+            } else if (age >= 18) {
+              document.getElementById("Lavish").innerHTML = "You will get Covaxin";
+            } else if (age >= 12) {
+              document.getElementById("Lavish").innerHTML = "You will get Corbevax";
+            } else {
+              document.getElementById("Lavish").innerHTML = "you are not eligible";
+            }
           }
-        }
-      </script>
-    </div>
+        </script>
+      </div>
+    </center>
   </body>
 </html>
